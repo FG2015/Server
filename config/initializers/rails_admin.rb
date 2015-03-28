@@ -2,7 +2,7 @@ RailsAdmin.config do |config|
 
   ### Popular gems integration
 
-  # ## == Devise ==
+  ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
   # end
@@ -30,6 +30,17 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+  end
+
+  config.model Client do
+    edit do
+      field :lat, :map do
+        longitude_field :lng
+        google_api_key "a1b2c3d4e5f6deadbeef"
+        default_latitude 38.62273  # Ibi
+        default_longitude -0.57544
+      end
+    end
   end
 
 end
