@@ -35,7 +35,7 @@ RailsAdmin.config do |config|
   config.model Client do
     edit do
       field :name
-      field :location
+      field :phone
       field :location, :geospatial
         address_field :address
         default_latitude 38.541058
