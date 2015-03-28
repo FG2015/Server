@@ -2,6 +2,7 @@ class Task
   include Mongoid::Document
   include Mongoid::Timestamps
   
+  # Validations
   validates_presence_of :name
   validates_presence_of :client
   validates_presence_of :rma
@@ -14,8 +15,6 @@ class Task
 
   # Fields
   field :name,        type: String
-  field :client,      type: String
-  field :client_phone,type: String
   field :rma,         type: String
   field :date,        type: DateTime
   field :start_date,  type: DateTime
@@ -23,5 +22,8 @@ class Task
   field :problem,     type: String
   field :solution,    type: String
   field :address,     type: String
+
+  # Relationships
   belongs_to :user
+  embedded_in :client
 end

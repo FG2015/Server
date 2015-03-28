@@ -1,6 +1,11 @@
 node(:id) { |w| w.id.to_s }
 
-attributes :created_at
-attributes :updated_at
-attributes :app_id
-attributes :token
+attributes :name
+attributes :client
+attributes :client_phone
+attributes :rma
+attributes :date
+attributes :start_date
+attributes :end_date
+attributes :solution
+attributes :address
