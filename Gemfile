@@ -26,6 +26,7 @@ gem "mongoid", "~> 4.0.0"
 
 # Users
 gem 'devise'
+gem 'rails_admin'
 
 
 group :development, :test do
