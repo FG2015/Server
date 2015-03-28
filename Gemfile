@@ -29,6 +29,7 @@ gem 'devise'
 gem 'rails_admin'
 gem 'cancancan', '~> 1.10'
 gem "rolify", '4.0.0'
+gem 'devise_token_auth'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
