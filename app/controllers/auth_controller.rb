@@ -28,7 +28,40 @@ class AuthController < ApplicationController
   end
 
   def signup
-    byebug
+    email = params[:email]
+    password = params[:password]
+    name = params[:name]
+
+    # Validation
+    if !email
+      render :json => { :status => :bad_request, :message => "Email required" }
+      return
+    if !password
+      render :json => { :status => :bad_request, :message => "Password required" }
+      return
+    elsif !name
+      render :json => { :status => :bad_request, :message => "Name required" }
+      return
+    end
+
+    user = User.find_by(email: email)
+    if user
+      render :json => { :status => :bad_request, :message => "Existing user" }
+      return
+    end
+
+    user = User.new
+    user.email = email
+    user.password = password
+    user.name = name
+    user.add_role :tech
+    if user.save
+      render :json => { :status => :ok, :token => user.authentication_token }
+    else
+      render :json => { :status => :server_error, :message => "Something went wrong creating user" }
+      return
+    end
+
   end
 
 end
