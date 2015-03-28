@@ -34,7 +34,15 @@ RailsAdmin.config do |config|
 
   config.model Client do
     edit do
+      field :name
+      field :location
       field :location, :geospatial
+        address_field :address
+        default_latitude 38.541058
+        default_longitude -0.122539
+        default_zoom_level 15
+        map_width 300
+        map_height 150
     end
   end
 
