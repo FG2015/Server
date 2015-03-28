@@ -36,10 +36,12 @@ class AuthController < ApplicationController
     if !email
       render :json => { :status => :bad_request, :message => "Email required" }
       return
+    end
     if !password
       render :json => { :status => :bad_request, :message => "Password required" }
       return
-    elsif !name
+    end
+    if !name
       render :json => { :status => :bad_request, :message => "Name required" }
       return
     end
