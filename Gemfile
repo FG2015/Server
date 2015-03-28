@@ -31,6 +31,9 @@ gem 'cancancan', '~> 1.10'
 gem "rolify", '4.0.0'
 gem 'simple_token_authentication', '~> 1.0' # see semver.org
 gem 'rabl'
+gem 'mongoid_spacial'
+gem "rails_admin_map_field", :git => "git://github.com/jasonl/rails_admin_map_field.git"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
