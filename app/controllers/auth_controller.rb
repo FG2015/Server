@@ -28,7 +28,6 @@ class AuthController < ApplicationController
   end
 
   def signup
-    byebug
     email = params[:email]
     password = params[:password]
     name = params[:name]
