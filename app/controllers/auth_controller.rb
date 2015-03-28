@@ -14,8 +14,9 @@ class AuthController < ApplicationController
     if !user
       render :json => { :status => :not_found, :message => "Not existing user" }
       return
+    user.save # Force token generation
     if user.valid_password?(password)
-      render :json => { :status => :ok, :token => user.token }
+      render :json => { :status => :ok, :token => user.authentication_token }
       return
     else
       render :json => { :status => :unauthorized, :message => "Invalid password" }
