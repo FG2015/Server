@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
+  # Admin
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
+  
   # Root
   root to: "home#index"
 
+  # Auth
+  devise_for :users
   post 'auth/sign_in', to: 'auth#signin'
   post 'auth/sign_up', to: 'auth#signup'
 
+
+  namespace :api do
+    resources  :tasks, only: [:index, :show, :create]
+  end
 end

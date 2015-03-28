@@ -27,8 +27,9 @@ class User
    ## Token Authenticatable
   acts_as_token_authenticatable
   field :authentication_token
-  
+
   # Others
   field :name,    type: String
+  has_many :tasks, dependent: :nullify
 
 end

@@ -14,6 +14,7 @@ class Task
   # Fields
   field :name,        type: String
   field :client,      type: String
+  field :client_phone,type: String
   field :rma,         type: String
   field :date,        type: Date
   field :start_date,  type: Date
@@ -21,4 +22,5 @@ class Task
   field :problem,     type: String
   field :solution,    type: String
   field :address,     type: String
+  belongs_to :user
 end
