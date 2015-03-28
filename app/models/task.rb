@@ -16,9 +16,9 @@ class Task
   field :client,      type: String
   field :client_phone,type: String
   field :rma,         type: String
-  field :date,        type: Date
-  field :start_date,  type: Date
-  field :end_date,    type: Date
+  field :date,        type: DateTime
+  field :start_date,  type: DateTime
+  field :end_date,    type: DateTime
   field :problem,     type: String
   field :solution,    type: String
   field :address,     type: String

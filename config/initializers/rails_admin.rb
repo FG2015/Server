@@ -32,12 +32,4 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.model 'Task' do
-    list do
-      field :date do
-        date_format :long
-      end
-    end
-  end
-
 end
