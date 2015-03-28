@@ -3,9 +3,8 @@ module Api
   class TasksController < ApiController
   
     def index
-      #TODO
+      
     end
-
 
     def show
       #TODO
