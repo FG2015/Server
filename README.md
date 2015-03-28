@@ -16,9 +16,10 @@
 
 ## TODO
 
-- [ ] User registration
-- [ ] User authentication
-- [ ] Rails Admin
+- [x] User registration
+- [x] User authentication
+- [x] Rails Admin
+- [ ] Task model
 - [ ] Task controller
 
 
