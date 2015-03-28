@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/sudosu/rails_admin_mongoid_geospatial_field.git
+  revision: 53bb616b3712651205cf03a14510e8c6f8446787
+  specs:
+    rails_admin_mongoid_geospatial_field (0.0.1)
+      rails (>= 3.0.0)
+      rails_admin (> 0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -97,9 +105,6 @@ GEM
       moped (~> 2.0.0)
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
-    mongoid_spacial (0.2.13)
-      activesupport
-      mongoid
     moped (2.0.4)
       bson (~> 2.2)
       connection_pool (~> 2.0)
@@ -152,8 +157,6 @@ GEM
       remotipart (~> 1.0)
       safe_yaml (~> 1.0)
       sass-rails (>= 4.0, < 6)
-    rails_admin_map_field (0.0.4)
-      rails (>= 3.0.0)
     railties (4.2.0)
       actionpack (= 4.2.0)
       activesupport (= 4.2.0)
@@ -219,11 +222,10 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mongoid (~> 4.0.0)
-  mongoid_spacial
   rabl
   rails (= 4.2.0)
   rails_admin
-  rails_admin_map_field
+  rails_admin_mongoid_geospatial_field!
   rolify (= 4.0.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
