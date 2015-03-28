@@ -28,6 +28,7 @@ class AuthController < ApplicationController
   end
 
   def signup
+    byebug
     email = params[:email]
     password = params[:password]
     name = params[:name]
@@ -46,7 +47,7 @@ class AuthController < ApplicationController
       return
     end
 
-    user = User.find_by(email: email)
+    user = User.where(email: email).first
     if user
       render :json => { :status => :bad_request, :message => "Existing user" }, :status => :bad_request
       return
@@ -57,6 +58,7 @@ class AuthController < ApplicationController
     user.password = password
     user.name = name
     user.add_role :tech
+
     if user.save
       render :json => { :status => :ok, :token => user.authentication_token }
     else
