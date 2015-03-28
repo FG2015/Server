@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount_devise_token_auth_for 'User', at: 'auth'
+  devise_for :users
   # Root
   root to: "home#index"
+
+  post 'auth/sign_in', to: 'auth#signin'
+  post 'auth/sign_up', to: 'auth#signup'
 
 end

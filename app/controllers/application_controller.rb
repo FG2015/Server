@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
-  include DeviseTokenAuth::Concerns::SetUserByToken
   # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with: :exception
+  # http://billpatrianakos.me/blog/2013/10/13/list-of-rails-status-code-symbols/
+  protect_from_forgery with: :null_session
 end
