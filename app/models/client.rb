@@ -14,5 +14,5 @@ class Client
 
 
   # Relationships
-  embeds_many :tasks
+  has_many :tasks
 end

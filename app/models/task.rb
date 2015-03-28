@@ -25,5 +25,5 @@ class Task
 
   # Relationships
   belongs_to :user
-  embedded_in :client
+  belongs_to :client
 end
