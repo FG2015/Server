@@ -32,7 +32,7 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.model Point do
+  config.model Client do
     edit do
       field :lat, :map do
         longitude_field :lng
