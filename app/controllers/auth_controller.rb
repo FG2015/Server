@@ -22,7 +22,7 @@ class AuthController < ApplicationController
       render :json => { :status => :ok, :token => user.authentication_token }
       return
     else
-      render :json => { :status => :unauthorized, :message => "Invalid password" }
+      render :json => { :status => 401, :message => "Invalid password" }
       return
     end
   end

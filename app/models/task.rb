@@ -1,6 +1,7 @@
 class Task
   include Mongoid::Document
-
+  include Mongoid::Timestamps
+  
   validates_presence_of :name
   validates_presence_of :client
   validates_presence_of :rma
