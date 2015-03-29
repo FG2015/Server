@@ -18,7 +18,6 @@ class Client
     self.location = self.location.map(&:to_f)
   end
 
-
   # Relationships
   has_many :tasks
 end
