@@ -25,7 +25,6 @@ class User
   field :last_sign_in_ip,    type: String
 
    ## Token Authenticatable
-  acts_as_token_authenticatable
   field :authentication_token
 
   # Others

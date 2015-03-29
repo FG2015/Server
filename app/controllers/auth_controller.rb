@@ -17,7 +17,12 @@ class AuthController < ApplicationController
       render :json => { :status => :not_found, :message => "Not existing user" }, :status => :not_found
       return
     end
-    user.save # Force token generation
+    
+    if !user.authentication_token
+      user.authentication_token = Devise.friendly_token
+      user.save
+    end
+
     if user.valid_password?(password)
       render :json => { :status => :ok, :token => user.authentication_token }
       return
@@ -55,6 +60,7 @@ class AuthController < ApplicationController
     user = User.new
     user.email = email
     user.password = password
+    user.authentication_token = Devise.friendly_token
     user.name = name
     user.add_role :tech
 

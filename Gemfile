@@ -29,7 +29,6 @@ gem 'devise'
 gem 'rails_admin'
 gem 'cancancan', '~> 1.10'
 gem "rolify", '4.0.0'
-gem 'simple_token_authentication', '~> 1.0' # see semver.org
 gem 'rabl'
 gem "rails_admin_mongoid_geospatial_field", :github => "sudosu/rails_admin_mongoid_geospatial_field"
 
