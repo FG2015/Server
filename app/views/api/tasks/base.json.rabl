@@ -1,8 +1,6 @@
 node(:id) { |w| w.id.to_s }
 
 attributes :name
-attributes :client
-attributes :client_phone
 attributes :rma
 attributes :start_date
 attributes :end_date
