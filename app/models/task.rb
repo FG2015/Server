@@ -11,7 +11,6 @@ class Task
   validates_presence_of :end_date
   validates_presence_of :problem
   validates_presence_of :solution
-  validates_presence_of :address
 
   # Fields
   field :name,        type: String
@@ -21,7 +20,6 @@ class Task
   field :end_date,    type: DateTime
   field :problem,     type: String
   field :solution,    type: String
-  field :address,     type: String
 
   # Relationships
   belongs_to :user

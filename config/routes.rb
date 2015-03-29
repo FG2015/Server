@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   post 'auth/sign_in', to: 'auth#signin'
   post 'auth/sign_up', to: 'auth#signup'
 
-
   namespace :api do
     resources  :tasks, only: [:index, :show]
   end

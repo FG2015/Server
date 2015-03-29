@@ -4,8 +4,8 @@ attributes :name
 attributes :rma
 attributes :start_date
 attributes :end_date
+attributes :problem
 attributes :solution
-attributes :address
 node(:client_name) { |t|  t.client.name }
 node(:client_phone) { |t|  t.client.phone }
 node(:client_latitude) { |t|  t.client.location[0] }
